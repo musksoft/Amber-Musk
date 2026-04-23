@@ -29,8 +29,8 @@ npx tailwindcss init -p
 
 ### Setup Environment variables
 Create a .env file: 
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+- VITE_SUPABASE_URL=your_supabase_url
+- VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 ### Run the development server on your localhost
 npm run dev
@@ -173,4 +173,4 @@ Performance optimization for assets
 
 Muskan Nisar
 
-Built with ❤️ for a modern perfume shopping experience.
+Built with 🌸 for a modern perfume shopping experience.
