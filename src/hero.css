@@ -1,0 +1,269 @@
+/* fonts stay global (this is fine) */
+@font-face {
+  font-family: 'ArabaModern';
+  src: url('./ArobaModernDemo-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Giomori';
+  src: url('./Giomori\ Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* scope everything */
+.hero *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  position: fixed;   /* 🔥 key fix */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'TWK Lausanne', sans-serif;
+}
+
+.hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+.hero .skip-to-details {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: white;
+  color: black;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.hero .skip-to-details:hover {
+  transform: translateY(4px);
+}
+
+.hero nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero nav p{
+  display: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.hero .nav-items{
+  display: flex;
+  gap: 2em;
+}
+
+.hero footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero footer p{
+  display: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.hero .slider-counter{
+  display: flex;
+}
+
+.hero .slider-counter p, 
+.hero .slider-counter > div{
+  width: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero .slider-counter p{
+  opacity: 0.35;
+
+}
+
+.hero .count{
+  position: relative;
+  height: 18px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero .count p{
+  position: absolute;
+  transform: translateY(0px);
+  font-size: 16px;
+  line-height: 1;
+  will-change: transform;
+  opacity: 1;
+}
+
+.hero .slider{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero .slide{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .slide-bg-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  will-change: clip-path;
+}
+
+.hero .slide-bg-img:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.125);
+}
+
+.hero .slide-main-img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: 50%;
+  z-index: 2;
+}
+
+.hero .slide-main-img-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero .slide-copy{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+}
+
+.hero .slide-title{
+  position: relative;
+  width: 500px;
+  height: 50px;
+  margin-bottom: 0.75em;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero .slide-title h1{
+  position: absolute;
+  color: #fff;
+  font-size: 48px;
+  line-height: 1;
+  font-family: 'Giomori', serif;
+  transform: translateY(0px);
+  will-change: transform;
+}
+
+.hero .slide-description{
+  position: relative;
+  width: 500px;
+  height: 20px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero .slide-description p{
+  position: absolute;
+  color: #fff;
+  font-size: 19px;
+  font-weight: lighter;
+  line-height: 1;
+  transform: translateY(0px);
+  will-change: transform;
+}
+
+@media(max-width: 400px){
+  .hero .slide-main-img{
+    width: 75%;
+  }
+
+  .hero .slide-copy{
+    top: 85%;              
+    left: 80%;            
+    transform: translate(-50%, -50%); 
+    width: 90%;
+  }
+
+  .hero .slide-title h1{
+    font-size: 32px;
+  }
+
+  .hero .slide-description p{
+    font-size: 16px;
+  }
+}
+
+.hero .details-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #f7d9d9;
+  color: #1c0505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .details-content h1 {
+  font-size: 48px;
+  font-weight: 400;
+}

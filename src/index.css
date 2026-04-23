@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Battambang:wght@100;300;400;700;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italiana&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'ArabaModern';
+  src: url('./ArobaModernDemo-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Giomori';
+  src: url('./Giomori\ Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Font class */
+.font-aboreto-regular {
+  font-family: "Aboreto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-battambang-regular {
+  font-family: "Battambang", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  font-family: 'TWK Lausanne', sans-serif;
+}
+
+.nav-links {
+  font-family: 'Georgia', serif; 
+  font-size: 1rem; 
+  font-weight: 500;
+  color: #372e1f; 
+}
+
