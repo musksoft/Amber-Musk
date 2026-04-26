@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../config/supabaseClient";
 
 const ADMIN_CODE = "AMBER2026";
@@ -7,7 +7,7 @@ const ADMIN_CODE = "AMBER2026";
 export default function AdminLogin() {
   const [code, setCode] = useState("");
   const [error, setError] = useState("");
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     const { data } = await supabase.auth.getUser();
@@ -32,7 +32,7 @@ export default function AdminLogin() {
     localStorage.setItem("isAdmin", "true");
     localStorage.removeItem("isUser");
 
-    window.location.href = "/admin"; // force refresh
+     navigate("/admin");
   };
 
   return (
