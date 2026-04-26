@@ -41,7 +41,7 @@ const Footer = () => {
         {/* Vendors Column */}
         <div>
           <h3 className="text-lg font-semibold text-amber-700  mb-4">
-           <Link to="/vendor">For Vendors</Link> 
+           <Link to="/admin-login">For Vendors</Link> 
           </h3>
           <ul className="space-y-2">
             <li className="text-amber-900 cursor-pointer">Sell With Us</li>
