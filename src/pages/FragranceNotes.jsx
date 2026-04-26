@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
-
+import { assets } from "../assets/asset";
 const perfumeImages = ["./new.png", "./img2.png", "./img3.png", "./orange.png"];
 
 const noteImages = {
-  Citrus: "./orange.png",
-  Green: "./img2.png",
-  Water: "./img3.png",
-  Aromatic: "./img2.png",
+  Citrus: assets.orange,
+  Green: assets.img3,
+  Water: assets.img2,
+  Aromatic: assets.musk,
 
-  "Soft Floral": "./img3.png",
-  Floral: "./img2.png",
-  Fruity: "./orange.png",
+  "Soft Floral": assets.img3,
+  Floral: assets.img3,
+  Fruity: assets.orange,
 
-  "Mossy Woods": "./woody.png",
-  Woods: "./woody.png",
-  "Dry Woods": "./woody.png",
+  "Mossy Woods": assets.wood,
+  Woods: assets.wood,
+  "Dry Woods": assets.wood,
 
-  "Soft Amber": "./amber.png",
-  Amber: "./amber.png",
-  "Woody Amber": "./amber.png",
+  "Soft Amber": assets.amber,
+  Amber: assets.amber,
+  "Woody Amber": assets.amber,
 };
 
 const fragranceNotes = [
@@ -109,7 +109,6 @@ export default function FragranceNotesPage() {
 
   return (
     <div className="min-h-screen">
-      {/* 🔥 TOP SECTION (Gradient only here) */}
       <div className="bg-gradient-to-tr from-[#90521d] via-[#edbc92] to-amber-800 text-white px-6 py-12">
         <div className="max-w-6xl mx-auto">
           {/* HEADER */}
@@ -137,7 +136,6 @@ export default function FragranceNotesPage() {
         alt="perfume"
         className={`absolute object-cover rounded-xl shadow-2xl transition-all duration-700
         
-        /* ✅ Responsive sizing */
         w-32 h-44
         sm:w-40 sm:h-56
         md:w-52 md:h-72
@@ -226,10 +224,9 @@ export default function FragranceNotesPage() {
           <div className="mt-16 max-w-3xl mx-auto text-center">
             {activeNote && (
               <div className="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-500">
-                {/* 🔥 IMAGE */}
                 <div className="h-56 w-full overflow-hidden">
                   <img
-                    src={noteImages[activeNote] || "./new.png"}
+                    src={noteImages[activeNote] || assets.musk}
                     alt={activeNote}
                     className="w-full h-full object-cover transition-all duration-500"
                   />

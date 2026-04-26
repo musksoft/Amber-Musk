@@ -2,27 +2,27 @@ import React from "react";
 import { perfumes } from "../assets/perfumes";
 import { ProductCard } from "../components/ProductCard";
 import { Link } from "react-router-dom";
-
+import { assets } from "../assets/asset";
 const featuresData = [
   {
     title: "Personalized Recommendations",
     description: "AI-powered scent matching based on your preferences",
-    icon: "/ai_ic.png",
+    icon: assets.ai_ic,
   },
   {
     title: "Verified Vendors",
     description: "All sellers go through our strict verification process",
-    icon: "/badge_ic.png",
+    icon: assets.badge_ic,
   },
   {
     title: "Community Reviews",
     description: "Real feedback from verified fragrance enthusiasts",
-    icon: "/community_ic.png",
+    icon: assets.community_ic,
   },
   {
     title: "Latest Trends",
     description: "Stay updated with the newest fragrance releases",
-    icon: "/trend_ic.png",
+    icon: assets.trend_ic,
   },
 ];
 
@@ -56,7 +56,7 @@ const Home = ({ addToCart }) => {
 
         <div className="w-full md:w-[450px] mt-8 md:mt-0 flex justify-center md:justify-end">
           <img
-            src="/img6.png"
+            src={assets.img6}
             alt="Perfume Bottle"
             className="w-[80%] md:w-full h-auto object-cover rounded-lg shadow-lg"
           />
@@ -85,7 +85,7 @@ const Home = ({ addToCart }) => {
 
         <div className="w-full md:w-[300px] mt-8 md:mt-0 flex justify-center md:justify-end">
           <img
-            src="/about.png"
+            src={assets.about}
             alt="Perfume Bottle"
             className="w-[70%] md:w-full h-auto object-cover rounded-lg shadow-lg"
           />

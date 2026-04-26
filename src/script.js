@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { CustomEase } from "gsap/CustomEase";
+import { assets } from "./assets/asset";
 
 gsap.registerPlugin(CustomEase);
 
@@ -47,7 +48,7 @@ function initSlider() {
     slideBgImg.className = "slide-bg-img";
 
     const img = document.createElement("img");
-    img.src = `./img${slideNumber}.png`;
+    img.src = assets[`img${slideNumber}`];;
 
     slideBgImg.appendChild(img);
     slide.appendChild(slideBgImg);
@@ -65,7 +66,7 @@ function initSlider() {
     wrapper.className = "slide-main-img-wrapper";
 
     const img = document.createElement("img");
-    img.src = `./img${slideNumber}.png`;
+    img.src = assets[`img${slideNumber}`];;
 
     wrapper.appendChild(img);
 
@@ -137,7 +138,7 @@ function initSlider() {
     }
 
     if (direction === "down" && currentSlide === totalSlides) {
-      window.location.href = "/home";
+      window.location.href = "/Amber-Musk/home";
       return;
     }
 

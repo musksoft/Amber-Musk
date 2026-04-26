@@ -1,48 +1,49 @@
 import { useState, useEffect } from "react";
+import { assets } from "../assets/asset";
 
 const questions = [
   {
     question: "What's your preferred scent intensity?",
     options: [
-      { text: "Light and fresh", family: ["Fresh", "Citrus"], image: "/fresh.png" },
-      { text: "Moderate and balanced", family: ["Floral", "Woody"], image: "/moderate.png" },
-      { text: "Bold and intense", family: ["Oriental", "Spicy"], image: "/bold.png" },
+      { text: "Light and fresh", family: ["Fresh", "Citrus"], image: assets.fresh },
+      { text: "Moderate and balanced", family: ["Floral", "Woody"], image: assets.moderate },
+      { text: "Bold and intense", family: ["Oriental", "Spicy"], image: assets.bold },
     ],
   },
   {
     question: "Which environment do you prefer?",
     options: [
-      { text: "Beach and ocean", family: ["Aquatic", "Fresh"], image: "/beach.png" },
-      { text: "Garden and flowers", family: ["Floral"], image: "/garden.png" },
-      { text: "Forest and woods", family: ["Woody"], image: "/forset.png" },
-      { text: "Exotic bazaar", family: ["Oriental", "Spicy"], image: "/bazaar.png" },
+      { text: "Beach and ocean", family: ["Aquatic", "Fresh"], image: assets.beach },
+      { text: "Garden and flowers", family: ["Floral"], image: assets.garden },
+      { text: "Forest and woods", family: ["Woody"], image: assets.forset },
+      { text: "Exotic bazaar", family: ["Oriental", "Spicy"], image: assets.bazaar },
     ],
   },
   {
     question: "When do you wear fragrance?",
     options: [
-      { text: "Daily", family: ["Fresh", "Citrus"], image: "/daily.png" },
-      { text: "Evenings", family: ["Woody", "Oriental"], image: "/sunset.png" },
-      { text: "Special occasions", family: ["Gourmand"], image: "/occasion.png" },
-      { text: "All the time", family: ["Floral", "Fresh"], image: "/all.png" },
+      { text: "Daily", family: ["Fresh", "Citrus"], image: assets.daily },
+      { text: "Evenings", family: ["Woody", "Oriental"], image: assets.sunset },
+      { text: "Special occasions", family: ["Gourmand"], image: assets.occasion },
+      { text: "All the time", family: ["Floral", "Fresh"], image: assets.all },
     ],
   },
   {
     question: "Pick a scent vibe:",
     options: [
-      { text: "Citrus & fruity", family: ["Citrus"], image: "/citrus.png" },
-      { text: "Sweet & vanilla", family: ["Gourmand"], image: "/icecream.png" },
-      { text: "Herbal & green", family: ["Fresh", "Woody"], image: "/herbal.png" },
-      { text: "Warm & spicy", family: ["Spicy", "Oriental"], image: "/spicy.png" },
+      { text: "Citrus & fruity", family: ["Citrus"], image: assets.citrus },
+      { text: "Sweet & vanilla", family: ["Gourmand"], image: assets.icecream },
+      { text: "Herbal & green", family: ["Fresh", "Woody"], image: assets.herbal },
+      { text: "Warm & spicy", family: ["Spicy", "Oriental"], image: assets.spicy },
     ],
   },
   {
     question: "Your style?",
     options: [
-      { text: "Classic", family: ["Floral", "Powdery"], image: "/cd.png" },
-      { text: "Trendy", family: ["Citrus", "Gourmand"], image: "/tech.png" },
-      { text: "Bold", family: ["Spicy", "Oriental"], image: "/sport.png" },
-      { text: "Minimal", family: ["Fresh", "Woody"], image: "/classic.png" },
+      { text: "Classic", family: ["Floral", "Powdery"], image: assets.cd },
+      { text: "Trendy", family: ["Citrus", "Gourmand"], image: assets.tech },
+      { text: "Bold", family: ["Spicy", "Oriental"], image: assets.sport },
+      { text: "Minimal", family: ["Fresh", "Woody"], image: assets.classic },
     ],
   },
 ];
@@ -51,40 +52,34 @@ const perfumes = [
   {
     name: "Ocean Breeze",
     family: ["Fresh", "Aquatic"],
-    image: "./img2.png",
+    image: assets.img2,
   },
   {
     name: "Rose Elegance",
     family: ["Floral"],
-    image:
-      "/royal.png",
+    image: assets.royal,
   },
   {
     name: "Midnight Spice",
     family: ["Spicy", "Oriental"],
-    image:
-      "/spice.png",
+    image: assets.spice,
   },
   {
     name: "Vanilla Dream",
     family: ["Gourmand"],
-    image:
-      "/vanilla.png",
+    image: assets.vanilla,
   },
   {
     name: "More Perfume 1",
     family: ["Floral", "Fresh"],
-    image:
-      "/pink.png",
+    image: assets.pink,
   },
   {
     name: "More Perfume 2",
     family: ["Woody"],
-    image:
-      "/circle.png",
+    image: assets.circle,
   },
 ];
-
 export default function ScentQuiz() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState([]);

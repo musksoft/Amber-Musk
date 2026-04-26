@@ -32,7 +32,7 @@ export default function AdminLogin() {
     localStorage.setItem("isAdmin", "true");
     localStorage.removeItem("isUser");
 
-    window.location.href = "/admin"; // 🔥 force refresh
+    window.location.href = "/admin"; // force refresh
   };
 
   return (

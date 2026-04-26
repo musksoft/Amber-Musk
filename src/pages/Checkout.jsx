@@ -52,7 +52,7 @@ const Checkout = ({ cartItems, setCartItems, user }) => {
     if (!validate()) return;
 
     try {
-      // 1️⃣ Insert order
+      //  Insert order
       const { data: order, error: orderError } = await supabase
         .from("orders")
         .insert([{ user_id: user.id, total }])
@@ -61,7 +61,7 @@ const Checkout = ({ cartItems, setCartItems, user }) => {
 
       if (orderError) throw orderError;
 
-      // 2️⃣ Insert order items
+      //  Insert order items
       const orderItemsData = cartItems.map((item) => ({
         order_id: order.id,
         product_id: parseInt(item.id), // ensure integer for DB

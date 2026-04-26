@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import "../hero.css"
+import { assets } from "../assets/asset.js";
+
 const Hero = () => {
 
   useEffect(() => {
@@ -34,13 +36,13 @@ const Hero = () => {
       <div className="slider">
         <div className="slide">
           <div className="slide-bg-img">
-            <img src="/img1.png" alt="" />
+            <img src={assets.img1} alt="" />
           </div>
         </div>
 
         <div className="slide-main-img">
           <div className="slide-main-img-wrapper">
-            <img src="/img1.png" alt="" />
+            <img src={assets.img1} alt="" />
           </div>
         </div>
 

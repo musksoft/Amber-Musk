@@ -6,13 +6,12 @@ import { toast } from "sonner";
 export function ProductDetail({ perfumes, addToCart, addToWardrobe, wardrobe }) {
   const { id } = useParams();
 
-  // ✅ FIX ID MATCH
   const perfume = perfumes.find((p) => String(p.id) === id);
 
   if (!perfume)
     return (
       <div className="p-8">
-        Product not found. <Link to="/shop">Back to Shop</Link>
+        Product not found. <Link to="Amber-Musk/shop">Back to Shop</Link>
       </div>
     );
 
