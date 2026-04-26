@@ -1,19 +1,16 @@
-/* fonts stay global (this is fine) */
 @font-face {
   font-family: 'ArabaModern';
-  src: url('./ArobaModernDemo-Regular.otf') format('opentype');
+  src: url('./assets/ArobaModernDemo-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Giomori';
-  src: url('./Giomori\ Italic.otf') format('opentype');
+  src: url('./assets/Giomori-Italic.otf') format('opentype');
   font-weight: normal;
   font-style: italic;
 }
-
-/* scope everything */
 .hero *{
   margin: 0;
   padding: 0;
@@ -21,7 +18,7 @@
 }
 
 .hero {
-  position: fixed;   /* 🔥 key fix */
+  position: fixed;   
   top: 0;
   left: 0;
   width: 100vw;
