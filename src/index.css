@@ -8,18 +8,17 @@
 
 @font-face {
   font-family: 'ArabaModern';
-  src: url('./ArobaModernDemo-Regular.otf') format('opentype');
+  src: url('./assets/ArobaModernDemo-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Giomori';
-  src: url('./Giomori\ Italic.otf') format('opentype');
+  src: url('./assets/Giomori-Italic.otf') format('opentype');
   font-weight: normal;
   font-style: italic;
 }
-
 /* Font class */
 .font-aboreto-regular {
   font-family: "Aboreto", system-ui;
