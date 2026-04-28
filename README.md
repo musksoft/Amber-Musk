@@ -6,6 +6,7 @@ It includes product browsing, cart system, authentication, admin dashboard, and 
 ---
 ## 🔗 Amber&Musk Live Website
 https://musksoft.github.io/Amber-Musk/ 
+---
 (pls wait for the images to load | code routing might break, requesting to reclick the link for better experience | admin section won't work unless the code is run locally on device due to github static reload issue| To view the admin section, type the "admin-login" in the url (running the website locally) or go to vendors section in footer. Create an account with email ending with "@ambernmusk.com" and then enter passcode "AMBER2026")
 
 ## 🔗 GitHub Repository
